@@ -30,10 +30,6 @@ import se.nackademin.librarytest.pages.WelcomePage;
 
 public class SelenideTest extends TestBase {
     private int sleepTime = 500;
-
-/*   public SelenideTest() {
-    }*/
-    
     
     //@Ignore
     @Test /*NOBODY IS REGISTRED*/
