@@ -167,7 +167,7 @@ public class RestTest {
     
     @Test /*test #5*/
        public void testDeleteAuthorById() {
-        //201 Delete the author with the specified id.
+        //204 Delete the author with the specified id.
         Author author = new Author();
         Response response = author.postAuthor("", "", "", "", 0, true);
         assertEquals("Status code should be 201", 201, response.statusCode());
@@ -203,6 +203,7 @@ public class RestTest {
         assertEquals("The author still has books in the database. TestDeleteAuthorByIdNegativ2 should return 409", 409, deleteResponse.getStatusCode());
         System.out.println("test #5.2. testDeleteAuthorByIdNegativ2. Status code: " + deleteResponse.getStatusCode());
         sleep(sleepTime);
+        
        }
  
     @Test /*test #6*/
@@ -954,9 +955,9 @@ public class RestTest {
       }
 
 
-/*    @Test /*test #21.3*///  DOSN'T WORK PROGRAMM. RETORN 201
-/*      public void testPostLoansNegativ3() { 
-          //400 The user had no role.
+/*    @Test /*test #21.6*///  DOSN'T WORK PROGRAMM. RETORN 201
+/*      public void testPostLoansNegativ6() { 
+          //400 The user's display name already exists.
            Loan loan = new Loan();
            User user = new User();
            Book book = new Book();
@@ -976,7 +977,7 @@ public class RestTest {
       
       }
 */
-/*  @Test /*test #22.3*///DOSN WORK BAG IN PROGRAM??
+/*  @Test /*test #21.3*///DOSN WORK BAG IN PROGRAM??
 /*      public void testPostLoansNegativ3() { 
           //400 The user had no role.
            Loan loan = new Loan();
